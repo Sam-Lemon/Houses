@@ -1,19 +1,14 @@
-import React from 'react';
-import './App.css';
-import HousesList from './Components/HouseList';
-
-function App() {
+import React, { Component } from 'react';
+import HouseList from './Components/HouseList';
 
 
-
-  return (
-    <div>
-      <div>'testing App.js'</div>
-      <HousesList/>
-    </div>
-    
-  
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <HouseList  />
+      </div>
+    )
+  }
 }
 
-export default App;

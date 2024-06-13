@@ -1,8 +1,12 @@
 import React from 'react';
 import { House } from './House';
-import { housesApi } from '../API/HousesAPI';
+import { housesApi } from '../API/HousesApi.js';
 
-export default class HousesList extends React.Component {
+export default class HouseList extends React.Component {
+
+/** Setting the state for the houses array. Because class components are stateful, meaning
+ * they automatically 
+*/
     state = { houses: [] }
 
 /** NEED COMMENT HERE ---- ABOUT WHY NEED COMPONENTDIDMOUNT BCZ THIS IS A CLASS OR SOMETHING?*/
@@ -16,7 +20,7 @@ export default class HousesList extends React.Component {
  * same time. And then I set the state of the houses array.*/    
     fetchHouses = async() => {
         const houses = await housesApi.get();
-        this.setState({houses});
+        this.setState({ houses });
     };
 
 /** The updateHouse function uses the put method to update the API.
@@ -37,10 +41,10 @@ export default class HousesList extends React.Component {
                     <House  
                         house={house}
                         key={house._id}
-                        updatedHouse={this.updateHouse}
+                        updateHouse={this.updateHouse}
                     />
                 ))}
             </div>
         )
     };
-}
+};

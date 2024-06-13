@@ -4,7 +4,7 @@
  * it is a global variable. The URL is in a string so that computer can read
  * it.*/
 
-const API_HOUSES = 'https://ancient-taiga-31359.herokuapp.com/api/houses'
+const API_HOUSES = 'https://ancient-taiga-31359.herokuapp.com/api/houses';
 
 
 /** Starting with a simple class to hold all of the HTTP requests.*/
@@ -24,7 +24,7 @@ class HousesApi {
             const data = await resp.json();
             return data;
         } catch(e) {
-            alert("Error, fetch didn't fetch");
+            alert("Error, fetch didn't fetch", e);
         }
     }
 

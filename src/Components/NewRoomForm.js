@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-
-
-const NewRoomForm = (props) => {
+export const NewRoomForm = (props) => {
     const [name, setName] = useState('');
     const [area, setArea] = useState('');
 
@@ -42,6 +40,5 @@ const NewRoomForm = (props) => {
             </form>
         </div>
     )
-}
+};
 
-export default NewRoomForm();
