@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import NewRoomForm from './NewRoomForm';
+import HousesList from './Components/HouseList';
 
 function App() {
 
@@ -9,8 +9,7 @@ function App() {
   return (
     <div>
       <div>'testing App.js'</div>
-      <div><NewRoomForm/></div>
-
+      <HousesList/>
     </div>
     
   
