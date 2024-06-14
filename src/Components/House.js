@@ -45,11 +45,19 @@ export const House = (props) => {
     const rooms = () => ( 
         <ul>
             {house.rooms.map((room, index) => (
-                <li key={index}>
-                    <label>{
-                        `${room.name} Area: ${room.area}`}</label>
-                    <button onClick={(e) => deleteRoom(room._id)}>Delete</button>
-                </li>
+                <div className='card'>
+                    <div className='card-body'>
+                        <h4>{room.name}</h4>
+                        <p className='card-text'>{room.area} sqft</p>
+                        {/* <button className='add-btn' onClick={(e) => NewRoomForm}>Add</button> */}
+                        <button className='card-btn' onClick={(e) => deleteRoom(room._id)}>Delete</button>
+                    </div>
+                </div>
+
+
+
+
+
             ))}
         </ul>
     );
@@ -58,10 +66,36 @@ export const House = (props) => {
     return (
         <div>
             <h1>{house.name}</h1>
-                {
-                rooms({rooms, houseId: house._id, deleteRoom})
-                }
-            <NewRoomForm addNewRoom={addNewRoom} />
+            <div>
+                <NewRoomForm addNewRoom={addNewRoom} />
+            </div>
+            <div>
+                {rooms({rooms, houseId: house._id, deleteRoom})}
+            </div>
         </div>
     );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //     <li key={index}>
+            //         <label>
+            //             {
+            //             `${room.name} Area: ${room.area}`
+            //             }
+            //         </label>
+            //         <button onClick={(e) => deleteRoom(room._id)}>Delete</button>
+            //     </li>

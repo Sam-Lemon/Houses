@@ -1,38 +1,71 @@
-.App {
+/********** House **********/
+.card {
+  background-color: lightseagreen;
+  border: 3px double darkslategray;
+  max-width: 20rem;
+  text-align: center;
+  margin: .5rem;
+}
+
+h4 {
+  text-shadow: .5px .5px;
+
+}
+
+.card-body {
+
+}
+
+.card-text {
+
+}
+
+.card-btn {
+  border-radius: 25px;
+}
+
+
+/********** New Room Form **********/
+
+.new-room-form {
+  display: flex;
+  border: 4px solid hotpink;
+  background-color: yellow;
+  max-width: 35rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.new-room-form-header {
+  border: 4px solid red;
+  font-size: x-large;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-body {
+  border: 4px solid purple;
+  max-width: 30rem;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.name-input, .area-input {
+  margin: .25rem;
 }
 
-.App-link {
-  color: #61dafb;
+.name-input {
+  border: 4px solid green;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.area-input {
+  border: 4px solid blue;
+
 }
+
+.new-room-submit-btn {
+  background-color: antiquewhite;
+  border-radius: 15px;
+  padding: .25rem;
+  margin: .5rem;
+}
+
