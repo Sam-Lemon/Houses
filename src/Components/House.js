@@ -44,20 +44,15 @@ export const House = (props) => {
                         <h4>{room.name}</h4>
                         <hr/>
                         <p>{room.area} sqft</p>
-                        {/* <button className='add-btn' onClick={(e) => NewRoomForm}>Add</button> */}
                         <button className='card-btn' onClick={(e) => deleteRoom(room._id)}>Delete</button>
                     </div>
                 </div>
-
-
-
-
-
             ))}
         </ul>
     );
 
-/**  NEED A COMMENT HERE!!!!!!!!!!!!!!!!!!!*/    
+/**  Here I'm returning the house name, the NewRoomForm component, and the functionality to 
+ * add a new room, and the list of rooms. This is the main body of the entire page.*/    
     return (
         <div>
             <h1>{house.name}</h1>

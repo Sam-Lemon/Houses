@@ -1,14 +1,26 @@
+/** Imported React and the useState hook.*/
 import React, { useState } from 'react';
 
+
+/** Here I'm creating a new function that takes in props and updates the state of 
+ * the component. */
 export const NewRoomForm = (props) => {
     const [name, setName] = useState('');
     const [area, setArea] = useState('');
 
+
+/** I make sure that the value inputted into the input field is a integer
+ * and then I set it as the room's area.*/
     const handleAreaInput = (e) => {
         const int = parseInt(e.target.value, 10);
         setArea(int >= 0 ? int : '');
     };
 
+/** The onSubmit variable here will take all of the user inputted data from 
+ * the form and creates a new room that will be added into the rooms array 
+ * later. Then it resets the form's input fields to empty for a better user
+ * experience. Because pushing a submit button in a form defaults to reloading
+ * the page, I used e.preventDefault() to stop that from happening.*/
     const onSubmit = (e) => {
         e.preventDefault();
         if (name && area) {
@@ -20,6 +32,11 @@ export const NewRoomForm = (props) => {
         }
     };
 
+/** Below is what the NewRoomForm will look like on the webpage. There is a title,
+ * "Add a new room" and two input boxes with placeholders (name and area) for the
+ * user to put information into, then a submit button to submit all that information.
+ * I passed the handleAreaInput function through the eventlistener for the room's 
+ * area and the setter for the room's name, setting it as the target.value onChange.*/
     return (
         <div className='new-room-form'>
         <h4 className='new-room-form-header'>Add a new room</h4>
@@ -49,7 +66,8 @@ export const NewRoomForm = (props) => {
 
  
 
-
+/** I was playing around using a modal, but didn't have the time to iron it out so that 
+ * it worked correctly. Maybe in the future.*/
 {/* <div class="modal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
