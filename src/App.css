@@ -1,27 +1,39 @@
+body {
+  background-color: #e88e67;
+  margin: 2rem;
+}
+
+/********** House **********/
+
+h1 {
+  color: #005C78;
+  text-shadow: 1px 1px #ed5e21;
+}
+
 /********** House **********/
 .card {
-  background-color: lightseagreen;
-  border: 3px double darkslategray;
+  background-color: #006989cb;
+  color: #F3F7EC;
+  border: 7px double darkslategray;
+  outline: 5px solid darkslategray;
   max-width: 20rem;
   text-align: center;
-  margin: .5rem;
+  margin: 1rem;
 }
 
 h4 {
   text-shadow: .5px .5px;
-
-}
-
-.card-body {
-
-}
-
-.card-text {
-
 }
 
 .card-btn {
-  border-radius: 25px;
+  border-radius: 5px;
+  background-color: #E88D67;
+  color: #F3F7EC;
+}
+
+.card-btn:hover {
+  background-color: #F3F7EC;
+  color: #E88D67;
 }
 
 
@@ -29,43 +41,47 @@ h4 {
 
 .new-room-form {
   display: flex;
-  border: 4px solid hotpink;
-  background-color: yellow;
+  border: 4px solid #005C78;
+  background-color: #f3f7ece0;
+  color: #005C78;
   max-width: 35rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
 }
 
 .new-room-form-header {
-  border: 4px solid red;
   font-size: x-large;
+  text-shadow: 1px 1px #d1d6c8;
   margin: auto;
 }
 
 .form-body {
-  border: 4px solid purple;
   max-width: 30rem;
   
 }
 
-.name-input, .area-input {
+form input {
+  border: 2px solid #006989;
   margin: .25rem;
 }
 
-.name-input {
-  border: 4px solid green;
-
-}
-
-.area-input {
-  border: 4px solid blue;
-
-}
 
 .new-room-submit-btn {
-  background-color: antiquewhite;
+  background-color: #E88D67;
+  color: #F3F7EC;
   border-radius: 15px;
   padding: .25rem;
   margin: .5rem;
+}
+
+.new-room-submit-btn:hover {
+  background-color: #F3F7EC;
+  color: #E88D67;
+
+}
+
+.new-room-submit-btn:active {
+  background-color: #006989;
+  color: #F3F7EC;
 }
 

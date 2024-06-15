@@ -10,14 +10,8 @@ export const House = (props) => {
 
 /** The deleteRoom function takes in a roomId parameter (so that React can
  * keep track of which specific room we'll be dealing with), uses the spread
- * operator to open up the house in question, and then filters out the specific
- * room I want to delete. Then it updates the house.
- * 
- * 
- * NEED MORE INFORMATION IN THIS COMMENT!!!!!!!!!!!!!!!!!!
- * 
- * 
-*/
+ * operator to open up the house object in question, and then filters out the specific
+ * room I want to delete. Then it updates the house.*/
     const deleteRoom = (roomId) => {
         const updatedHouse = {
             ...house,
@@ -45,10 +39,11 @@ export const House = (props) => {
     const rooms = () => ( 
         <ul>
             {house.rooms.map((room, index) => (
-                <div className='card'>
+                <div className='card' key={index}>
                     <div className='card-body'>
                         <h4>{room.name}</h4>
-                        <p className='card-text'>{room.area} sqft</p>
+                        <hr/>
+                        <p>{room.area} sqft</p>
                         {/* <button className='add-btn' onClick={(e) => NewRoomForm}>Add</button> */}
                         <button className='card-btn' onClick={(e) => deleteRoom(room._id)}>Delete</button>
                     </div>
@@ -91,11 +86,3 @@ export const House = (props) => {
 
 
 
-            //     <li key={index}>
-            //         <label>
-            //             {
-            //             `${room.name} Area: ${room.area}`
-            //             }
-            //         </label>
-            //         <button onClick={(e) => deleteRoom(room._id)}>Delete</button>
-            //     </li>

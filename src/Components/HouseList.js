@@ -1,15 +1,19 @@
+/** I imported React, and the House and HouseAPI components for this file.*/
 import React from 'react';
 import { House } from './House';
 import { housesApi } from '../API/HousesApi.js';
 
 export default class HouseList extends React.Component {
 
-/** Setting the state for the houses array. Because class components are stateful, meaning
- * they automatically 
-*/
+/** Setting the state for the houses array. Most of the time class
+ * components require a constructor and super constructor; however, I
+ * have used an alternative syntax here (just experimenting) called 
+ * class fields.*/
     state = { houses: [] }
 
-/** NEED COMMENT HERE ---- ABOUT WHY NEED COMPONENTDIDMOUNT BCZ THIS IS A CLASS OR SOMETHING?*/
+/** I'm using componentDidMount to call my fetchHouses function, which
+ * uses .get() from HousesApi to fetch the data from the server.
+*/
     componentDidMount() {
         this.fetchHouses();
     };
