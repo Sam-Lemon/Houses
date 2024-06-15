@@ -1,6 +1,6 @@
 /** I imported React, the component HouseList, and the css file.*/
 import React, { Component } from 'react';
-import HouseList from './Components/HouseList';
+import HouseList from './Component/HouseList';
 import './App.css';
 
 
@@ -10,7 +10,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <HouseList  />
+        <HouseList/>
       </div>
     )
   }

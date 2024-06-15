@@ -5,6 +5,7 @@
  * it.*/
 
 const API_HOUSES = 'https://ancient-taiga-31359.herokuapp.com/api/houses';
+// const API_HOUSES = 'https://666d4cd47a3738f7cacc0611.mockapi.io/House'
 
 
 /** Starting with a simple class to hold all of the HTTP requests.*/
@@ -18,13 +19,14 @@ class HousesApi {
  * takes that data and converts it to json so that react can read it, and 
  * then returns that data. If we ran into a problem, an alert would pop up
  * saying "fetch didn't fetch".*/
+
     get = async() => {
         try{
             const resp = await fetch(API_HOUSES);
             const data = await resp.json();
             return data;
         } catch(e) {
-            alert("Error, fetch didn't fetch", e);
+            console.log("Error, fetch didn't fetch", e);
         }
     }
 
@@ -45,7 +47,7 @@ class HousesApi {
             });
             return await resp.json();
         } catch(e) {
-            alert("Put ain't puttin", e);
+            console.log("Put ain't puttin", e);
         }
     }
 }

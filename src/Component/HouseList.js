@@ -1,6 +1,6 @@
 /** I imported React, and the House and HouseAPI components for this file.*/
 import React from 'react';
-import { House } from './House';
+import { House } from './House.js';
 import { housesApi } from '../API/HousesApi.js';
 
 export default class HouseList extends React.Component {
@@ -52,3 +52,4 @@ export default class HouseList extends React.Component {
         )
     };
 };
+

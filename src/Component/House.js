@@ -37,7 +37,7 @@ export const House = (props) => {
  * specific room id that I want to delete.
 */
     const rooms = () => ( 
-        <ul>
+        <div>
             {house.rooms.map((room, index) => (
                 <div className='card' key={index}>
                     <div className='card-body'>
@@ -48,7 +48,7 @@ export const House = (props) => {
                     </div>
                 </div>
             ))}
-        </ul>
+        </div>
     );
 
 /**  Here I'm returning the house name, the NewRoomForm component, and the functionality to 
